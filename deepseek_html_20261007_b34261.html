@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa Store - متجر الخدمات الأكاديمية والطلابية | السعودية</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="Rosa Store السعودية - خدمات أكاديمية معتمدة: أبحاث علمية، مشاريع تخرج، عروض PowerPoint، ترجمة، وتدقيق لغوي. تقرير Turnitin مجاني. قسّطي مع تابي وتمارا.">
+    <meta name="keywords" content="أبحاث أكاديمية, مشاريع تخرج, Turnitin, ترجمة معتمدة, خدمات طلابية, تابي, تمارا, السعودية">
+    <meta name="theme-color" content="#8B2E5D">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rosa Store - خدمات أكاديمية معتمدة في السعودية">
+    <meta property="og:description" content="رحلتك الأكاديمية أسهل مع Rosa Store. قسّطي مع تابي وتمارا">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            rose: '#8B2E5D',
+                            roseLight: '#B8467A',
+                            roseDark: '#5E1F3F',
+                            gold: '#E8B4B8',
+                            goldDeep: '#D4919A',
+                            goldDark: '#B8737D',
+                            blush: '#FDF2F6',
+                            blushDeep: '#FCE7EF',
+                            pink: '#F5C6D6',
+                            pinkDeep: '#E8A0B8',
+                            lavender: '#E6D7F0',
+                            cream: '#FFF9FB',
+                        }
+                    },
+                    fontFamily: {
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 10px 25px -5px rgba(139, 46, 93, 0.08)',
+                        'glow': '0 0 30px rgba(232, 180, 184, 0.5)',
+                        'soft': '0 4px 20px rgba(139, 46, 93, 0.1)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        shimmer: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.6' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        html { scroll-behavior: smooth; }
+        
+        .gradient-rose {
+            background: linear-gradient(135deg, #8B2E5D 0%, #B8467A 100%);
+        }
+        
+        .gradient-rose-gold {
+            background: linear-gradient(135deg, #E8B4B8 0%, #D4919A 50%, #B8737D 100%);
+        }
+        
+        .gradient-blush {
+            background: linear-gradient(135deg, #FDF2F6 0%, #FCE7EF 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8B2E5D 0%, #E8B4B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-gold {
+            background: linear-gradient(135deg, #E8B4B8 0%, #B8737D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 15% 25%, rgba(232, 180, 184, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(245, 198, 214, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(139, 46, 93, 0.08) 0%, transparent 60%);
+        }
+
+        .dots-pattern {
+            background-image: radial-gradient(rgba(232, 180, 184, 0.4) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .glass {
+            background: rgba(253, 242, 246, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -15px rgba(139, 46, 93, 0.2);
+        }
+
+        /* Dark Mode */
+        .dark body { background-color: #2A0F1E; color: #FCE7EF; }
+        .dark .bg-white { background-color: #3A1528 !important; }
+        .dark .bg-slate-50 { background-color: #2A0F1E !important; }
+        .dark .bg-slate-100 { background-color: #4A1E36 !important; }
+        .dark .text-slate-900 { color: #FCE7EF !important; }
+        .dark .text-slate-700 { color: #F5C6D6 !important; }
+        .dark .text-slate-600 { color: #E8A0B8 !important; }
+        .dark .text-slate-500 { color: #D4919A !important; }
+        .dark .border-slate-200 { border-color: #5E1F3F !important; }
+        .dark .border-slate-100 { border-color: #4A1E36 !important; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDF2F6; }
+        ::-webkit-scrollbar-thumb { background: #E8B4B8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4919A; }
+
+        .modal-enter { animation: modalEnter 0.25s ease-out; }
+        @keyframes modalEnter {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .fade-in { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Tabby & Tamara Brand Colors */
+        .tabby-gradient {
+            background: linear-gradient(135deg, #3EEDBF 0%, #1ABC9C 100%);
+        }
+        .tamara-gradient {
+            background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#FDF2F6] text-slate-800 antialiased">
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="gradient-rose text-rose-50 text-xs py-2.5 px-4 border-b border-white/10">
+    <div class="flex items-center gap-2 max-w-7xl mx-auto w-full justify-between">
+        <span class="flex items-center gap-2">
+            <span class="bg-brand-gold text-brand-roseDark font-black px-2.5 py-0.5 rounded-full text-[10px] shadow">🌸 عرض خاص</span>
+            <span class="text-rose-100 font-medium hidden sm:inline">خصم 20% + قسّطي مع تابي وتمارا على 4 دفعات!</span>
+            <span class="text-rose-100 font-medium sm:hidden">خصم 20% + قسّطي مع تابي وتمارا!</span>
+        </span>
+        <span class="hidden md:flex items-center gap-4 text-[11px] text-rose-200">
+            <span><i class="fa-solid fa-headset text-brand-gold ml-1"></i> دعم 24/7</span>
+            <span><i class="fa-solid fa-shield-halved text-emerald-300 ml-1"></i> ضمان Turnitin 100%</span>
+            <span><i class="fa-solid fa-flag-sa text-emerald-300 ml-1"></i> خدمة سعودية 100%</span>
+        </span>
+    </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="glass border-b border-pink-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+        
+        <div class="flex items-center gap-3 cursor-pointer" onclick="showMainStoreView()">
+            <div class="w-12 h-12 rounded-2xl gradient-rose flex items-center justify-center text-brand-gold text-2xl shadow-lg hover:scale-105 transition">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-black text-2xl gradient-text leading-tight">Rosa Store</span>
+                    <span class="bg-brand-gold/30 text-brand-roseDark text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-brand-gold/50">🇸🇦 سعودي معتمد</span>
+                </div>
+                <p class="text-xs text-rose-400 font-medium">المنصة الرائدة للخدمات الطلابية بالمملكة</p>
+            </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-bold text-slate-700">
+            <button onclick="showMainStoreView()" class="hover:text-brand-rose transition">الرئيسية</button>
+            <a href="#services-catalog" onclick="showMainStoreView()" class="hover:text-brand-rose transition">الخدمات</a>
+            <a href="#brand-vision-section" onclick="showMainStoreView()" class="hover:text-brand-rose transition">عن Rosa</a>
+            <a href="#payments-section" onclick="showMainStoreView()" class="hover:text-brand-rose transition">الدفع والتقسيط</a>
+            <button onclick="openOrderTrackingModal()" class="hover:text-brand-rose transition flex items-center gap-1.5">
+                <i class="fa-solid fa-magnifying-glass text-xs"></i> تتبع طلب
+            </button>
+        </nav>
+
+        <div class="flex items-center gap-2">
+            <button onclick="toggleDarkMode()" id="darkModeBtn" aria-label="تبديل الوضع الليلي" class="w-10 h-10 rounded-xl bg-pink-100 hover:bg-pink-200 flex items-center justify-center text-brand-rose transition">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button onclick="scrollToServices()" class="hidden sm:flex gradient-rose hover:opacity-90 text-white px-5 py-2.5 rounded-xl font-black text-xs shadow-md active:scale-95 transition items-center gap-2">
+                <i class="fa-solid fa-heart text-sm"></i> اطلبي الآن
+            </button>
+
+            <button onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden w-10 h-10 rounded-xl bg-pink-100 hover:bg-pink-200 flex items-center justify-center text-brand-rose">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden border-t border-pink-200 bg-white">
+        <nav class="px-6 py-4 flex flex-col gap-3 text-sm font-bold text-slate-700">
+            <button onclick="showMainStoreView(); toggleMobileMenu();" class="text-right py-2 hover:text-brand-rose transition">الرئيسية</button>
+            <a href="#services-catalog" onclick="showMainStoreView(); toggleMobileMenu();" class="py-2 hover:text-brand-rose transition">الخدمات</a>
+            <a href="#brand-vision-section" onclick="showMainStoreView(); toggleMobileMenu();" class="py-2 hover:text-brand-rose transition">عن Rosa Store</a>
+            <a href="#payments-section" onclick="showMainStoreView(); toggleMobileMenu();" class="py-2 hover:text-brand-rose transition">الدفع والتقسيط</a>
+            <button onclick="openOrderTrackingModal(); toggleMobileMenu();" class="text-right py-2 hover:text-brand-rose transition">
+                <i class="fa-solid fa-magnifying-glass text-xs ml-1"></i> تتبع طلب
+            </button>
+        </nav>
+    </div>
+</header>
+
+<div id="main-content-view" class="flex-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="gradient-rose text-white relative py-20 sm:py-28 px-6 overflow-hidden">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="absolute inset-0 dots-pattern opacity-30"></div>
+        
+        <div class="absolute top-20 right-10 w-72 h-72 bg-brand-gold/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-pink-300/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10 space-y-6">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full border border-brand-gold/40 text-brand-gold text-xs font-bold">
+                <i class="fa-solid fa-crown"></i> الشريك المعتمد للطالبات في المملكة العربية السعودية 🇸🇦
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight max-w-4xl mx-auto">
+                رحلتك الأكاديمية أسهل<br>
+                <span class="gradient-text-gold">وأجمل مع Rosa Store</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-rose-100 max-w-3xl mx-auto leading-relaxed font-light">
+                نجمع بين الرصانة الأكاديمية والتصميم الأنيق. أبحاث علمية، مشاريع تخرج، وعروض PowerPoint احترافية مع تقرير أصالة Turnitin مجاني.
+            </p>
+
+            <!-- شارة التقسيط البارزة -->
+            <div class="inline-flex flex-wrap items-center justify-center gap-3 bg-white/10 backdrop-blur-md px-5 py-3 rounded-2xl border border-brand-gold/40 max-w-2xl mx-auto">
+                <span class="text-brand-gold font-black text-xs flex items-center gap-1.5">
+                    <i class="fa-solid fa-sparkles"></i> قسّطي طلبك بدون فوائد:
+                </span>
+                <span class="tabby-gradient text-white text-[10px] font-black px-3 py-1 rounded-lg shadow flex items-center gap-1.5">
+                    <i class="fa-solid fa-calendar-check"></i> تابي Tabby
+                </span>
+                <span class="tamara-gradient text-white text-[10px] font-black px-3 py-1 rounded-lg shadow flex items-center gap-1.5">
+                    <i class="fa-solid fa-hand-holding-dollar"></i> تمارا Tamara
+                </span>
+            </div>
+
+            <div class="pt-4 flex flex-wrap justify-center items-center gap-5 text-xs text-brand-gold font-bold">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-300"></i> خلو من السرقة الأدبية 100%</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-300"></i> توثيق APA 7th</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-300"></i> تعديلات مجانية</span>
+            </div>
+
+            <div class="pt-6 flex flex-wrap justify-center gap-4">
+                <a href="#services-catalog" class="gradient-rose-gold text-brand-roseDark font-black text-sm px-8 py-4 rounded-xl shadow-xl hover:opacity-90 transition shadow-glow">
+                    🌸 تصفحي الخدمات والتصاميم
+                </a>
+                <button onclick="toggleChatbot()" class="bg-white/15 hover:bg-white/25 border border-white/25 text-white font-bold text-sm px-6 py-4 rounded-xl transition flex items-center gap-2">
+                    <i class="fa-solid fa-comments text-brand-gold"></i> استشارة المساعدة الذكية
+                </button>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6 mt-12 max-w-2xl mx-auto pt-8 border-t border-white/15">
+                <div>
+                    <p class="text-3xl sm:text-4xl font-black text-brand-gold">+3000</p>
+                    <p class="text-xs text-rose-100 font-semibold mt-1">طالبة سعيدة بالمملكة</p>
+                </div>
+                <div class="border-r border-l border-white/15">
+                    <p class="text-3xl sm:text-4xl font-black text-brand-gold">+50</p>
+                    <p class="text-xs text-rose-100 font-semibold mt-1">خدمة متوفرة</p>
+                </div>
+                <div>
+                    <p class="text-3xl sm:text-4xl font-black text-brand-gold">24/7</p>
+                    <p class="text-xs text-rose-100 font-semibold mt-1">دعم بتوقيت السعودية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TABBY & TAMARA PROMO BANNER ============ -->
+    <section class="py-8 px-6 bg-white border-b border-pink-100">
+        <div class="max-w-5xl mx-auto bg-gradient-to-l from-teal-50 via-pink-50 to-violet-50 border-2 border-pink-200 rounded-3xl p-6 sm:p-8 shadow-card">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-right space-y-2">
+                    <div class="inline-flex items-center gap-2 bg-brand-gold/30 text-brand-roseDark px-3 py-1 rounded-full text-[10px] font-black border border-brand-gold/50">
+                        <i class="fa-solid fa-sparkles"></i> ميزة جديدة
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-black text-brand-roseDark">
+                        قسّطي طلبك على <span class="text-teal-600">4 دفعات</span> أو ادفعي <span class="text-violet-600">لاحقاً</span> 🌸
+                    </h3>
+                    <p class="text-xs text-slate-600 max-w-lg">
+                        بدون فوائد، بدون رسوم خفية، وبدون الحاجة لبطاقة ائتمانية. متوافق مع تابي وتمارا — الأشهر في المملكة العربية السعودية.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="tabby-gradient text-white rounded-2xl p-4 shadow-lg flex flex-col items-center gap-1 min-w-[100px]">
+                        <i class="fa-solid fa-calendar-check text-2xl"></i>
+                        <span class="text-[10px] font-black">تابي</span>
+                        <span class="text-[9px] opacity-90">على 4</span>
+                    </div>
+                    <div class="tamara-gradient text-white rounded-2xl p-4 shadow-lg flex flex-col items-center gap-1 min-w-[100px]">
+                        <i class="fa-solid fa-hand-holding-dollar text-2xl"></i>
+                        <span class="text-[10px] font-black">تمارا</span>
+                        <span class="text-[9px] opacity-90">ادفعي لاحقاً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VISION ============ -->
+    <section id="brand-vision-section" class="py-16 px-6 bg-white border-b border-pink-100">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <span class="text-brand-rose font-black text-xs uppercase bg-pink-100 px-3 py-1 rounded-full border border-pink-200">🌸 قصة وهوية Rosa Store</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brand-roseDark">نبتكر المعرفة ونخرجها بأناقة</h2>
+                <p class="text-sm text-slate-600">تأسست Rosa Store لتكون المرجع الأول للطالبات في المملكة الراغبات في الدمج بين الدقة الأكاديمية والإخراج البصري الراقي.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blush p-8 rounded-3xl border border-pink-200/80 space-y-4 hover:border-brand-gold transition card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-200 text-brand-rose flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-brand-roseDark">رؤيتنا الأكاديمية</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        تمكين الطالبات في الجامعات السعودية من تقديم أعمال تُبهر لجان المناقشة وتضمن التفوق بأقل جهد.
+                    </p>
+                </div>
+
+                <div class="bg-blush p-8 rounded-3xl border border-pink-200/80 space-y-4 hover:border-brand-gold transition card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-gold/30 text-brand-roseDark flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-stamp"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-brand-roseDark">رسالة الأمانة</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        الالتزام التام بقواعد البحث العلمي، وضمان الأصالة الفكرية لجميع النصوص والتصاميم.
+                    </p>
+                </div>
+
+                <div class="bg-blush p-8 rounded-3xl border border-pink-200/80 space-y-4 hover:border-brand-gold transition card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-brand-roseDark">التزامنا تجاهك</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        دعم متواصل حتى بعد التسليم، وتوفير كافة التعديلات المطلوبة مجاناً.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services-catalog" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-10">
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="text-brand-rose font-extrabold text-xs uppercase bg-pink-100 px-3 py-1 rounded-full border border-pink-200">🌸 معرض الخدمات</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-brand-roseDark">خدماتنا الطلابية والأكاديمية</h2>
+            <p class="text-sm text-slate-600">اضغطي على أي خدمة لاستعراض التصميم المبدئي وحاسبة التكلفة</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2">
+            <button onclick="filterServices('all')" data-filter="all" class="filter-btn gradient-rose text-white px-4 py-2 rounded-full text-xs font-bold transition">الكل</button>
+            <button onclick="filterServices('الأبحاث العلمية')" data-filter="الأبحاث العلمية" class="filter-btn bg-pink-100 hover:bg-pink-200 text-brand-roseDark px-4 py-2 rounded-full text-xs font-bold transition">أبحاث</button>
+            <button onclick="filterServices('مشاريع الخريجين')" data-filter="مشاريع الخريجين" class="filter-btn bg-pink-100 hover:bg-pink-200 text-brand-roseDark px-4 py-2 rounded-full text-xs font-bold transition">مشاريع تخرج</button>
+            <button onclick="filterServices('العروض التفاعلية')" data-filter="العروض التفاعلية" class="filter-btn bg-pink-100 hover:bg-pink-200 text-brand-roseDark px-4 py-2 rounded-full text-xs font-bold transition">عروض</button>
+            <button onclick="filterServices('الترجمة واللغات')" data-filter="الترجمة واللغات" class="filter-btn bg-pink-100 hover:bg-pink-200 text-brand-roseDark px-4 py-2 rounded-full text-xs font-bold transition">ترجمة</button>
+            <button onclick="filterServices('التدقيق والتحرير')" data-filter="التدقيق والتحرير" class="filter-btn bg-pink-100 hover:bg-pink-200 text-brand-roseDark px-4 py-2 rounded-full text-xs font-bold transition">تدقيق</button>
+        </div>
+
+        <div id="services-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="gradient-rose text-white py-16 px-6 border-y border-pink-300/20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/15 space-y-3 text-center hover:bg-white/15 transition">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-brand-gold/30 text-brand-gold flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">تقرير Turnitin أصلي</h3>
+                <p class="text-xs text-rose-100 leading-relaxed">تقرير رسمي يوضح نسبة الأصالة 100%.</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/15 space-y-3 text-center hover:bg-white/15 transition">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-pink-400/30 text-pink-200 flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">تصميم أنيق</h3>
+                <p class="text-xs text-rose-100 leading-relaxed">إخراج بصري ممتاز للأوراق والمشاريع.</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/15 space-y-3 text-center hover:bg-white/15 transition">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-400/30 text-emerald-200 flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-business-time"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">التزام بالموعد</h3>
+                <p class="text-xs text-rose-100 leading-relaxed">إمكانية تسليم الخدمات المستعجلة.</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/15 space-y-3 text-center hover:bg-white/15 transition">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-rose-400/30 text-rose-200 flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">تعديلات مجانية</h3>
+                <p class="text-xs text-rose-100 leading-relaxed">حتى تحوزي على أفضل تقييم من الدكتورة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAYMENTS - سعودي 100% ============ -->
+    <section id="payments-section" class="py-16 px-6 max-w-6xl mx-auto w-full text-center space-y-8">
+        <div class="space-y-2">
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+                <i class="fa-solid fa-lock text-[10px]"></i> Secure Payments 🇸🇦
+            </span>
+            <h2 class="text-3xl font-black text-brand-roseDark">وسائل الدفع والتقسيط المعتمدة في السعودية</h2>
+            <p class="text-sm text-slate-500">نوفر خيارات دفع آمنة ومرنة لجميع الطالبات في المملكة العربية السعودية</p>
+        </div>
+
+        <!-- شريط التقسيط -->
+        <div class="bg-gradient-to-l from-teal-50 via-pink-50 to-violet-50 border-2 border-dashed border-brand-gold/50 rounded-2xl p-4 max-w-3xl mx-auto">
+            <div class="flex flex-wrap items-center justify-center gap-3 text-xs">
+                <span class="font-black text-brand-roseDark flex items-center gap-1.5">
+                    <i class="fa-solid fa-sparkles text-brand-gold"></i> قسّطي بدون فوائد:
+                </span>
+                <span class="tabby-gradient text-white text-[10px] font-black px-3 py-1 rounded-lg shadow flex items-center gap-1.5">
+                    <i class="fa-solid fa-calendar-check"></i> تابي على 4 دفعات
+                </span>
+                <span class="tamara-gradient text-white text-[10px] font-black px-3 py-1 rounded-lg shadow flex items-center gap-1.5">
+                    <i class="fa-solid fa-hand-holding-dollar"></i> تمارا — ادفعي لاحقاً
+                </span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <!-- تابي -->
+            <div class="bg-white border-2 border-teal-200 p-4 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition flex flex-col items-center gap-2 relative">
+                <span class="absolute -top-2 -right-2 bg-teal-500 text-white text-[8px] font-black px-2 py-0.5 rounded-full shadow">الأكثر استخداماً ⭐</span>
+                <div class="tabby-gradient text-white w-11 h-11 rounded-full flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <span class="font-bold text-xs text-brand-roseDark">تابي Tabby</span>
+                <span class="text-[10px] text-teal-600 font-bold">على 4 دفعات</span>
+            </div>
+
+            <!-- تمارا -->
+            <div class="bg-white border-2 border-violet-200 p-4 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition flex flex-col items-center gap-2 relative">
+                <span class="absolute -top-2 -right-2 bg-violet-500 text-white text-[8px] font-black px-2 py-0.5 rounded-full shadow">مفضّل الطالبات 💜</span>
+                <div class="tamara-gradient text-white w-11 h-11 rounded-full flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <span class="font-bold text-xs text-brand-roseDark">تمارا Tamara</span>
+                <span class="text-[10px] text-violet-600 font-bold">ادفعي لاحقاً</span>
+            </div>
+
+            <!-- مدى -->
+            <div class="bg-white border border-pink-200 p-4 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition flex flex-col items-center gap-2">
+                <div class="w-11 h-11 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <span class="font-bold text-xs text-brand-roseDark">مدى Mada</span>
+                <span class="text-[10px] text-rose-400">بطاقة سعودية</span>
+            </div>
+
+            <!-- Apple Pay -->
+            <div class="bg-white border border-pink-200 p-4 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition flex flex-col items-center gap-2">
+                <div class="w-11 h-11 rounded-full bg-pink-100 text-brand-rose flex items-center justify-center text-xl">
+                    <i class="fa-brands fa-apple"></i>
+                </div>
+                <span class="font-bold text-xs text-brand-roseDark">Apple Pay</span>
+                <span class="text-[10px] text-rose-400">دفع سريع</span>
+            </div>
+
+            <!-- STC Pay -->
+            <div class="bg-white border border-pink-200 p-4 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition flex flex-col items-center gap-2">
+                <div class="w-11 h-11 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <span class="font-bold text-xs text-brand-roseDark">STC Pay</span>
+                <span class="text-[10px] text-rose-400">محفظة رقمية</span>
+            </div>
+
+            <!-- فيزا / ماستر -->
+            <div class="bg-white border border-pink-200 p-4 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition flex flex-col items-center gap-2">
+                <div class="w-11 h-11 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xl">
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+                <span class="font-bold text-xs text-brand-roseDark">فيزا / ماستر</span>
+                <span class="text-[10px] text-rose-400">دولي</span>
+            </div>
+        </div>
+
+        <!-- شارة الأمان -->
+        <div class="flex flex-wrap justify-center items-center gap-4 text-[10px] text-slate-500 pt-4">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-emerald-500"></i> دفع آمن ومشفر SSL</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-500"></i> متوافق مع مؤسسة النقد السعودي</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-flag-sa text-emerald-500"></i> خدمة داخل المملكة</span>
+        </div>
+    </section>
+
+</div>
+
+<!-- ============ DETAIL VIEW ============ -->
+<div id="service-detail-view" class="hidden min-h-screen bg-pink-50 py-10 px-4 sm:px-6 lg:px-8 fade-in">
+    <div class="max-w-6xl mx-auto space-y-6">
+        
+        <div class="flex items-center justify-between">
+            <button onclick="showMainStoreView()" class="bg-white border border-pink-200 text-brand-rose font-bold px-4 py-2 rounded-xl text-xs hover:bg-pink-50 transition flex items-center gap-2 shadow-sm">
+                <i class="fa-solid fa-arrow-right"></i> العودة للرئيسية
+            </button>
+            <span class="text-xs text-rose-400 font-medium">Rosa Store / تفاصيل الخدمة</span>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-pink-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+            
+            <div class="lg:col-span-7 gradient-rose text-rose-50 p-6 sm:p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-l border-pink-800/30">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span id="detail-category-badge" class="bg-brand-gold/30 text-brand-gold border border-brand-gold/40 text-xs font-bold px-3 py-1 rounded-full">الأبحاث</span>
+                        <span class="text-brand-gold text-xs font-bold"><i class="fa-solid fa-star"></i> <span id="detail-rating">4.9</span></span>
+                    </div>
+                    <h1 id="detail-service-title" class="text-2xl sm:text-3xl font-black text-white leading-snug">عنوان الخدمة</h1>
+                    <p id="detail-service-short-desc" class="text-xs sm:text-sm text-rose-100 leading-relaxed">وصف...</p>
+                </div>
+
+                <div class="my-8 space-y-2">
+                    <span class="text-[11px] text-brand-gold font-bold flex items-center gap-1.5">
+                        <i class="fa-solid fa-display"></i> المعاينة الحية للتصميم:
+                    </span>
+                    <div id="detail-visual-graphic-box" class="bg-brand-roseDark rounded-2xl p-6 border border-pink-800/40 shadow-2xl min-h-[260px] flex items-center justify-center"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 text-xs pt-4 border-t border-white/15">
+                    <div class="space-y-1">
+                        <span class="text-rose-200 block font-bold">صيغ التسليم:</span>
+                        <span id="detail-deliverables" class="text-brand-gold font-medium block">Word + PDF</span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-rose-200 block font-bold">التوثيق:</span>
+                        <span id="detail-citation-standards" class="text-brand-gold font-medium block">APA 7th</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 p-6 sm:p-8 bg-white flex flex-col justify-between space-y-6">
+                <div class="space-y-5">
+                    <div class="border-b border-pink-200 pb-3">
+                        <h2 class="font-extrabold text-brand-roseDark text-lg">حاسبة التكلفة</h2>
+                        <p class="text-xs text-rose-400">حددي الكمية والموعد لاحتساب التكلفة</p>
+                    </div>
+
+                    <div class="space-y-4 text-xs">
+                        <div>
+                            <label class="block font-bold text-brand-roseDark mb-1" id="calc-quantity-label">عدد الصفحات:</label>
+                            <div class="flex items-center gap-2">
+                                <button onclick="adjustPageCount(-1)" class="w-9 h-9 rounded-xl bg-pink-100 hover:bg-pink-200 text-brand-rose font-bold shadow-sm">-</button>
+                                <input type="number" id="calcPageInput" value="5" min="1" oninput="recalculatePrice()" class="flex-1 border border-pink-200 rounded-xl p-2.5 text-center font-black text-brand-roseDark outline-none focus:border-brand-gold">
+                                <button onclick="adjustPageCount(1)" class="w-9 h-9 rounded-xl bg-pink-100 hover:bg-pink-200 text-brand-rose font-bold shadow-sm">+</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-brand-roseDark mb-1">سرعة التسليم:</label>
+                            <select id="calcSpeedSelect" onchange="recalculatePrice()" class="w-full border border-pink-200 rounded-xl p-2.5 font-bold outline-none focus:border-brand-gold bg-white">
+                                <option value="normal">عادي (3-5 أيام)</option>
+                                <option value="fast">مستعجل (24-48 ساعة) (+30%)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-brand-roseDark mb-1">كود الخصم:</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="couponInput" placeholder="ROSA20" class="flex-1 border border-pink-200 rounded-xl p-2.5 outline-none focus:border-brand-gold uppercase font-bold">
+                                <button onclick="applyCoupon()" class="gradient-rose hover:opacity-90 text-white px-4 rounded-xl text-xs font-bold transition">تطبيق</button>
+                            </div>
+                            <p id="couponFeedback" class="text-[10px] mt-1 font-bold hidden"></p>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-brand-roseDark mb-1">اسم الطالبة: <span class="text-rose-500">*</span></label>
+                            <input type="text" id="orderStudentName" placeholder="اسمك والجامعة" required class="w-full border border-pink-200 rounded-xl p-2.5 outline-none focus:border-brand-gold">
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-brand-roseDark mb-1">رقم الواتساب: <span class="text-rose-500">*</span></label>
+                            <input type="tel" id="orderPhone" placeholder="+966 5X XXX XXXX" required class="w-full border border-pink-200 rounded-xl p-2.5 outline-none focus:border-brand-gold" dir="ltr">
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-brand-roseDark mb-1">طريقة الدفع:</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="paymentMethod" value="tabby" class="peer sr-only" checked>
+                                    <div class="peer-checked:border-teal-500 peer-checked:bg-teal-50 border-2 border-pink-200 rounded-xl p-2 text-center text-[10px] font-bold transition hover:border-teal-300">
+                                        <i class="fa-solid fa-calendar-check text-teal-600 block mb-0.5"></i>
+                                        تابي
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="paymentMethod" value="tamara" class="peer sr-only">
+                                    <div class="peer-checked:border-violet-500 peer-checked:bg-violet-50 border-2 border-pink-200 rounded-xl p-2 text-center text-[10px] font-bold transition hover:border-violet-300">
+                                        <i class="fa-solid fa-hand-holding-dollar text-violet-600 block mb-0.5"></i>
+                                        تمارا
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="paymentMethod" value="cash" class="peer sr-only">
+                                    <div class="peer-checked:border-brand-rose peer-checked:bg-pink-50 border-2 border-pink-200 rounded-xl p-2 text-center text-[10px] font-bold transition hover:border-brand-rose">
+                                        <i class="fa-solid fa-money-bill text-brand-rose block mb-0.5"></i>
+                                        كاش
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-brand-roseDark mb-1">ملاحظات الدكتورة:</label>
+                            <textarea id="orderSpecialNotes" rows="2" placeholder="اشتراطات خاصة..." class="w-full border border-pink-200 rounded-xl p-2.5 outline-none focus:border-brand-gold"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-pink-200 space-y-3">
+                    <div class="bg-pink-50 p-4 rounded-2xl border border-brand-gold/40 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] text-brand-rose font-bold">التكلفة الإجمالية</span>
+                            <span id="discountBadge" class="hidden text-[10px] bg-rose-500 text-white font-bold px-2 py-0.5 rounded-full">-20%</span>
+                        </div>
+                        <div class="text-xl font-black text-brand-roseDark" id="calculatedPriceDisplay">450 ر.س</div>
+                        
+                        <!-- عرض التقسيط -->
+                        <div class="bg-white rounded-xl p-2.5 border border-teal-200 flex items-center justify-between">
+                            <span class="text-[10px] text-slate-600 font-bold flex items-center gap-1.5">
+                                <i class="fa-solid fa-sparkles text-teal-500"></i> قسّطي على 4 دفعات:
+                            </span>
+                            <span class="text-sm font-black text-teal-600" id="tabbyInstallment">112.50 ر.س/شهر</span>
+                        </div>
+                    </div>
+
+                    <button onclick="submitDetailedOrderToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3.5 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-xs">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> إرسال الطلب عبر الواتساب
+                    </button>
+                    
+                    <button onclick="saveOrderLocally()" class="w-full bg-pink-100 hover:bg-pink-200 text-brand-rose font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-bookmark"></i> حفظ كمسودة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ QUICK ORDER MODAL ============ -->
+<div id="quick-order-modal" class="hidden fixed inset-0 bg-brand-roseDark/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white text-brand-roseDark w-full max-w-md rounded-3xl p-6 shadow-2xl border border-pink-200 space-y-4 modal-enter">
+        <div class="flex justify-between items-center border-b border-pink-200 pb-3">
+            <h3 class="font-extrabold text-lg flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i> طلب سريع 🌸
+            </h3>
+            <button onclick="closeQuickOrderModal()" class="text-rose-400 hover:text-brand-rose w-8 h-8 flex items-center justify-center rounded-lg hover:bg-pink-50">✕</button>
+        </div>
+        <div class="space-y-3 text-xs">
+            <div>
+                <label class="block font-bold mb-1">الخدمة:</label>
+                <input type="text" id="quickOrderTargetService" readonly class="w-full bg-pink-50 border border-pink-200 rounded-xl p-2.5 font-bold">
+            </div>
+            <div>
+                <label class="block font-bold mb-1">اسم الطالبة: <span class="text-rose-500">*</span></label>
+                <input type="text" id="quickOrderStudent" required class="w-full border border-pink-200 rounded-xl p-2.5 outline-none focus:border-brand-gold">
+            </div>
+            <div>
+                <label class="block font-bold mb-1">رقم الواتساب: <span class="text-rose-500">*</span></label>
+                <input type="tel" id="quickOrderPhone" required placeholder="+966..." class="w-full border border-pink-200 rounded-xl p-2.5 outline-none focus:border-brand-gold" dir="ltr">
+            </div>
+            <div>
+                <label class="block font-bold mb-1">التفاصيل:</label>
+                <textarea id="quickOrderNotes" rows="3" class="w-full border border-pink-200 rounded-xl p-2.5 outline-none focus:border-brand-gold"></textarea>
+            </div>
+        </div>
+        <button onclick="submitQuickOrderToWhatsApp()" class="w-full gradient-rose hover:opacity-90 text-white font-black py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs transition">
+            <i class="fa-brands fa-whatsapp text-base"></i> إرسال عبر الواتساب
+        </button>
+    </div>
+</div>
+
+<!-- ============ ORDER TRACKING MODAL ============ -->
+<div id="order-tracking-modal" class="hidden fixed inset-0 bg-brand-roseDark/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white text-brand-roseDark w-full max-w-md rounded-3xl p-6 shadow-2xl border border-pink-200 space-y-4 modal-enter">
+        <div class="flex justify-between items-center border-b border-pink-200 pb-3">
+            <h3 class="font-extrabold text-lg flex items-center gap-2">
+                <i class="fa-solid fa-magnifying-glass text-brand-rose"></i> تتبع طلبك 🌸
+            </h3>
+            <button onclick="closeOrderTrackingModal()" class="text-rose-400 hover:text-brand-rose w-8 h-8 flex items-center justify-center rounded-lg hover:bg-pink-50">✕</button>
+        </div>
+        <p class="text-xs text-rose-500">أدخلي رقم الطلب لمشاهدة حالته:</p>
+        <div class="flex gap-2">
+            <input type="text" id="trackingCodeInput" placeholder="RS-2026-1247" class="flex-1 border border-pink-200 rounded-xl p-3 font-bold outline-none focus:border-brand-gold uppercase">
+            <button onclick="trackOrder()" class="gradient-rose text-white px-5 rounded-xl text-xs font-bold transition">تتبع</button>
+        </div>
+        <div id="trackingResult" class="hidden space-y-3"></div>
+    </div>
+</div>
+
+<!-- ============ CHATBOT ============ -->
+<div id="rosa-chatbot-container" class="fixed bottom-6 left-6 z-50 font-tajawal flex flex-col items-start">
+    <div id="chat-window-box" class="hidden w-80 bg-white rounded-3xl shadow-2xl border border-pink-200 overflow-hidden mb-3 text-brand-roseDark text-xs">
+        <div class="gradient-rose text-white p-4 flex items-center justify-between font-bold border-b border-brand-gold/30">
+            <div class="flex items-center gap-2.5">
+                <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+                <span class="font-extrabold text-xs">مساعدة Rosa الذكية 🌸</span>
+            </div>
+            <button onclick="toggleChatbot()" class="text-rose-200 hover:text-white w-6 h-6 flex items-center justify-center rounded">✕</button>
+        </div>
+        <div id="chat-messages-stream" class="p-4 h-64 overflow-y-auto space-y-3 bg-pink-50"></div>
+        <div id="chat-qa-buttons" class="p-3 bg-white border-t border-pink-200 space-y-1.5"></div>
+    </div>
+    <button onclick="toggleChatbot()" aria-label="فتح المساعدة الذكية" class="gradient-rose-gold text-brand-roseDark font-black px-5 py-3.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition flex items-center gap-2.5 text-xs border-2 border-white/60 shadow-glow">
+        <i class="fa-solid fa-robot text-lg"></i>
+        <span>مساعدة Rosa الذكية</span>
+    </button>
+</div>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="#" id="floatingWhatsApp" onclick="openFloatingWhatsApp(event)" aria-label="واتساب" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+</a>
+
+<!-- ============ FOOTER ============ -->
+<footer class="gradient-rose text-rose-100 text-xs py-10 px-6 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-right">
+        <div class="space-y-2">
+            <div class="flex items-center justify-center md:justify-start gap-2">
+                <span class="font-extrabold text-white text-base">Rosa Store</span>
+                <span class="text-brand-gold text-[10px] border border-brand-gold px-1.5 py-0.5 rounded">🇸🇦 متجر أكاديمي سعودي معتمد</span>
+            </div>
+            <p class="text-rose-200">أعلى دقة أكاديمية وأرقى إخراج بصري للأبحاث والمشاريع الطلابية بالمملكة.</p>
+            <div class="flex items-center justify-center md:justify-start gap-3 pt-2 text-[10px] text-rose-200">
+                <span><i class="fa-solid fa-location-dot text-brand-gold ml-1"></i> الرياض، المملكة العربية السعودية</span>
+                <span><i class="fa-solid fa-clock text-brand-gold ml-1"></i> 24/7 بتوقيت السعودية</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
+                <a href="#" aria-label="فيسبوك" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-brand-gold hover:text-brand-roseDark flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="إنستجرام" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-brand-gold hover:text-brand-roseDark flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="تويتر" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-brand-gold hover:text-brand-roseDark flex items-center justify-center transition"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="تيك توك" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-brand-gold hover:text-brand-roseDark flex items-center justify-center transition"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/966593606923" aria-label="واتساب" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="text-rose-200 space-y-1">
+            <p>© 2026 Rosa Store - جميع الحقوق محفوظة.</p>
+            <p class="text-[10px]">صُنع بـ <i class="fa-solid fa-heart text-brand-gold"></i> للطالبات في المملكة العربية السعودية 🇸🇦</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="fixed top-24 right-6 z-[100] hidden">
+    <div class="bg-brand-roseDark text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 text-sm font-bold border-r-4 border-brand-gold">
+        <i class="fa-solid fa-circle-check text-brand-gold"></i>
+        <span id="toastMessage">تم بنجاح!</span>
+    </div>
+</div>
+
+<script>
+    /* ============================================================
+       CONFIG - إعدادات سعودية
+       ============================================================ */
+    const CONFIG = {
+        whatsappNumber: '966593606923',
+        storeName: 'Rosa Store',
+        currency: 'ر.س',
+        country: 'المملكة العربية السعودية',
+        city: 'الرياض',
+        timezone: 'بتوقيت السعودية'
+    };
+
+    const COUPONS = {
+        'ROSA20': 20,
+        'NEW10': 10,
+        'STUDENT15': 15,
+        'FLOWER25': 25,
+        'KSA30': 30
+    };
+
+    /* ============================================================
+       SERVICES DATABASE - أسعار سعودية
+       ============================================================ */
+    const servicesDB = [
+        {
+            id: 'research',
+            title: 'إعداد الأبحاث والتقارير الأكاديمية',
+            category: 'الأبحاث العلمية',
+            unitPrice: 90,
+            rating: 4.9,
+            badge: 'الأكثر طلباً 🌸',
+            shortDesc: 'صياغة أبحاث رصينة وموثقة وفق APA 7th / MLA مع تقرير Turnitin الأصلي.',
+            fullDesc: 'كتابة الأبحاث الأكاديمية من الصفر، الاعتماد على مراجع ودوريات علمية حديثة، تنسيق الفهارس، وتوثيق المراجع بدقة عالية.',
+            visualType: 'research_graphic',
+            deliverables: 'Word + PDF + تقرير Turnitin',
+            citation: 'APA 7th / MLA / Harvard'
+        },
+        {
+            id: 'graduation',
+            title: 'إعداد مشاريع التخرج والدراسات',
+            category: 'مشاريع الخريجين',
+            unitPrice: 130,
+            rating: 5.0,
+            badge: 'دعم كامل 🎓',
+            shortDesc: 'تغطية شاملة لكل فصول مشروع التخرج والدراسات التطبيقية.',
+            fullDesc: 'نبني فصول مشروع التخرج بدءاً من خطة البحث، الإطار النظري، المنهجية، وصولاً لتحليل البيانات والتوصيات.',
+            visualType: 'graduation_graphic',
+            deliverables: 'مشروع كامل + العرض + الاستبيان',
+            citation: 'حسب النظام الجامعي السعودي'
+        },
+        {
+            id: 'ppt',
+            title: 'تصميم عروض PowerPoint و Canva',
+            category: 'العروض التفاعلية',
+            unitPrice: 55,
+            rating: 4.8,
+            badge: 'تصميم أنيق 💕',
+            shortDesc: 'شرائح عرض إنفوجرافيك جذابة تضمن إبهاء لجنة المناقشة.',
+            fullDesc: 'تحويل الأبحاث إلى عروض بصرية تحتوي على أشكال بيانية، أيقونات احترافية، وتسلسل أفكار يسهل الإلقاء.',
+            visualType: 'ppt_graphic',
+            deliverables: 'PowerPoint + Canva + PDF',
+            citation: 'ملخص بصري'
+        },
+        {
+            id: 'plagiarism',
+            title: 'فحص الاستلال وتقرير Turnitin',
+            category: 'الضمان الأكاديمي',
+            unitPrice: 40,
+            rating: 4.9,
+            badge: 'تقرير أصلي 📄',
+            shortDesc: 'فحص نسبة الاقتباس وإعادة الصياغة الذكية.',
+            fullDesc: 'استخراج تقرير استلال رسمي من Turnitin، مع خيار إعادة الصياغة الأكاديمية للنصوص المقتبسة.',
+            visualType: 'plagiarism_graphic',
+            deliverables: 'تقرير Turnitin + النص المصحح',
+            citation: 'مطابق للمعايير الجامعية السعودية'
+        },
+        {
+            id: 'translation',
+            title: 'الترجمة الأكاديمية المعتمدة',
+            category: 'الترجمة واللغات',
+            unitPrice: 70,
+            rating: 4.9,
+            badge: 'دقة معتمدة 🌐',
+            shortDesc: 'ترجمة علمية متخصصة بين العربية والإنجليزية.',
+            fullDesc: 'ترجمة دقيقة للمقالات العلمية تحافظ على روح النص والمصطلحات التخصصية.',
+            visualType: 'translation_graphic',
+            deliverables: 'Word + PDF بفرز متقابل',
+            citation: 'ترجمة المصطلحات المعتمدة'
+        },
+        {
+            id: 'proofreading',
+            title: 'التدقيق اللغوي والنحوي الشامل',
+            category: 'التدقيق والتحرير',
+            unitPrice: 45,
+            rating: 4.8,
+            badge: 'مراجعة خبيرة ✍️',
+            shortDesc: 'تصحيح السلامة اللغوية والنحوية وتنسيق علامات الترقيم.',
+            fullDesc: 'مراجعة شاملة للأخطاء الإملائية والتركيبية، وضبط صياغة الجمل وفق قواعد اللغة.',
+            visualType: 'proofreading_graphic',
+            deliverables: 'الملف المصحح مع Track Changes',
+            citation: 'ضبط التشكيل والترقيم'
+        }
+    ];
+
+    let currentSelectedService = servicesDB[0];
+    let currentFilter = 'all';
+    let appliedDiscount = 0;
+
+    /* ============================================================
+       INIT
+       ============================================================ */
+    window.onload = function() {
+        renderServicesGrid();
+        initChatbot();
+        restoreTheme();
+        loadSavedDraft();
+    };
+
+    /* ============================================================
+       RENDER SERVICES
+       ============================================================ */
+    function renderServicesGrid() {
+        const container = document.getElementById('services-grid-container');
+        container.innerHTML = '';
+
+        const filtered = currentFilter === 'all' 
+            ? servicesDB 
+            : servicesDB.filter(s => s.category === currentFilter);
+
+        if (filtered.length === 0) {
+            container.innerHTML = '<p class="col-span-full text-center text-rose-400 py-10">لا توجد خدمات في هذا التصنيف</p>';
+            return;
+        }
+
+        filtered.forEach(service => {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-3xl border border-pink-200 shadow-card hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden group card-hover fade-in';
+            
+            const visualHTML = getVisualGraphicHTML(service.visualType);
+            const installment = Math.round((service.unitPrice * 5 / 4) * 100) / 100;
+
+            card.innerHTML = `
+                <div>
+                    <div class="gradient-rose relative overflow-hidden flex items-center justify-center p-4 h-44">
+                        ${visualHTML}
+                        <span class="absolute top-3 right-3 gradient-rose-gold text-brand-roseDark text-[10px] font-black px-2.5 py-1 rounded-full shadow">
+                            ${service.badge}
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between text-xs text-rose-400 font-bold">
+                            <span><i class="fa-solid fa-tag text-brand-gold ml-1"></i> ${service.category}</span>
+                            <span class="text-brand-rose"><i class="fa-solid fa-star"></i> ${service.rating}</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-brand-roseDark group-hover:text-brand-rose transition leading-snug">
+                            ${service.title}
+                        </h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            ${service.shortDesc}
+                        </p>
+                        <!-- شارة التقسيط -->
+                        <div class="bg-teal-50 border border-teal-200 rounded-xl p-2 flex items-center justify-between text-[10px]">
+                            <span class="text-teal-700 font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-sparkles"></i> قسّطي:
+                            </span>
+                            <span class="text-teal-600 font-black">${installment} ر.س × 4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 border-t border-pink-100 flex items-center justify-between gap-2 mt-4">
+                    <span class="text-xs font-black text-brand-roseDark">تبدأ من ${service.unitPrice} ${CONFIG.currency}</span>
+                    <button onclick="openDetailedServicePage('${service.id}')" class="gradient-rose hover:opacity-90 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition flex items-center gap-1.5 shadow">
+                        التفاصيل <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                    </button>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    function filterServices(category) {
+        currentFilter = category;
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            if (btn.dataset.filter === category) {
+                btn.classList.add('gradient-rose', 'text-white');
+                btn.classList.remove('bg-pink-100', 'text-brand-roseDark');
+            } else {
+                btn.classList.remove('gradient-rose', 'text-white');
+                btn.classList.add('bg-pink-100', 'text-brand-roseDark');
+            }
+        });
+        renderServicesGrid();
+    }
+
+    /* ============================================================
+       VISUAL GRAPHICS
+       ============================================================ */
+    function getVisualGraphicHTML(type) {
+        const graphics = {
+            research_graphic: `
+                <div class="w-full h-full border border-brand-gold/30 rounded-xl bg-brand-roseDark/80 backdrop-blur p-3 flex flex-col justify-between text-[10px] text-rose-100 font-mono shadow-inner">
+                    <div class="flex justify-between items-center border-b border-brand-gold/30 pb-1 text-brand-gold font-bold">
+                        <span>ACADEMIC PAPER</span><span>APA 7th</span>
+                    </div>
+                    <div class="space-y-1.5 my-1">
+                        <div class="h-2 bg-brand-gold/70 rounded w-3/4"></div>
+                        <div class="h-1.5 bg-rose-300/40 rounded w-full"></div>
+                        <div class="h-1.5 bg-rose-300/40 rounded w-5/6"></div>
+                        <div class="h-1.5 bg-rose-300/40 rounded w-2/3"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-[9px] text-emerald-300 pt-1 border-t border-brand-gold/30">
+                        <span><i class="fa-solid fa-check"></i> Turnitin: 0%</span>
+                        <span>Refs: 15+</span>
+                    </div>
+                </div>`,
+            graduation_graphic: `
+                <div class="w-full h-full border border-brand-gold/30 rounded-xl bg-brand-roseDark/80 backdrop-blur p-3 flex items-center justify-between gap-3 shadow-inner">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-gold/30 text-brand-gold flex items-center justify-center text-2xl shrink-0 border border-brand-gold/50">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="flex-1 space-y-1.5 text-right">
+                        <span class="text-brand-gold font-bold text-xs block">مشروع تخرج موثق</span>
+                        <div class="h-1.5 bg-rose-300/40 rounded w-full"></div>
+                        <div class="h-1.5 bg-rose-300/40 rounded w-4/5"></div>
+                        <span class="text-[9px] text-emerald-300 block"><i class="fa-solid fa-circle-check"></i> جاهز للمناقشة</span>
+                    </div>
+                </div>`,
+            ppt_graphic: `
+                <div class="w-full h-full border border-brand-gold/30 rounded-xl bg-brand-roseDark/80 backdrop-blur p-3 flex flex-col justify-between shadow-inner">
+                    <div class="bg-brand-rose/40 rounded p-1.5 flex items-center justify-between border border-brand-gold/30">
+                        <span class="text-brand-gold text-xs font-bold"><i class="fa-solid fa-file-powerpoint"></i> Slide Deck</span>
+                        <span class="text-[9px] bg-brand-gold/30 text-brand-gold px-1.5 py-0.5 rounded">Infographics</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-1.5 my-1">
+                        <div class="bg-brand-gold/20 border border-brand-gold/40 rounded p-1 text-center text-[9px] text-brand-gold">A</div>
+                        <div class="bg-pink-400/20 border border-pink-300/40 rounded p-1 text-center text-[9px] text-pink-200">B</div>
+                        <div class="bg-emerald-500/20 border border-emerald-400/40 rounded p-1 text-center text-[9px] text-emerald-200">C</div>
+                    </div>
+                </div>`,
+            plagiarism_graphic: `
+                <div class="w-full h-full border border-brand-gold/30 rounded-xl bg-brand-roseDark/80 backdrop-blur p-3 flex items-center justify-between shadow-inner">
+                    <div class="space-y-1">
+                        <span class="text-xs font-extrabold text-emerald-300 block"><i class="fa-solid fa-shield-halved"></i> Turnitin</span>
+                        <span class="text-[10px] text-rose-100 block">Originality: 98%</span>
+                        <span class="text-[9px] text-rose-300 block">تقرير رسمي</span>
+                    </div>
+                    <div class="w-12 h-12 rounded-full border-4 border-emerald-400 flex items-center justify-center font-black text-xs text-emerald-300">2%</div>
+                </div>`,
+            translation_graphic: `
+                <div class="w-full h-full border border-brand-gold/30 rounded-xl bg-brand-roseDark/80 backdrop-blur p-3 flex items-center justify-around shadow-inner">
+                    <div class="text-center">
+                        <span class="text-base font-bold text-brand-gold block">AR</span>
+                        <span class="text-[9px] text-rose-200">الأصل</span>
+                    </div>
+                    <div class="text-rose-300 text-xs"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                    <div class="text-center">
+                        <span class="text-base font-bold text-brand-gold block">EN</span>
+                        <span class="text-[9px] text-rose-200">Certified</span>
+                    </div>
+                </div>`,
+            proofreading_graphic: `
+                <div class="w-full h-full border border-brand-gold/30 rounded-xl bg-brand-roseDark/80 backdrop-blur p-3 flex items-center justify-between shadow-inner">
+                    <div class="space-y-1">
+                        <span class="text-xs font-bold text-brand-gold block"><i class="fa-solid fa-pen-nib"></i> تدقيق لغوي</span>
+                        <div class="h-1.5 bg-emerald-400/60 rounded w-28"></div>
+                        <div class="h-1.5 bg-rose-300/40 rounded w-20"></div>
+                    </div>
+                    <div class="w-10 h-10 rounded-lg bg-brand-gold/20 text-brand-gold flex items-center justify-center text-xl">🌸</div>
+                </div>`
+        };
+        return graphics[type] || graphics.research_graphic;
+    }
+
+    /* ============================================================
+       DETAIL PAGE
+       ============================================================ */
+    function openDetailedServicePage(serviceId) {
+        const service = servicesDB.find(s => s.id === serviceId);
+        if (!service) return;
+
+        currentSelectedService = service;
+        appliedDiscount = 0;
+
+        document.getElementById('detail-category-badge').innerText = service.category;
+        document.getElementById('detail-service-title').innerText = service.title;
+        document.getElementById('detail-service-short-desc').innerText = service.fullDesc;
+        document.getElementById('detail-deliverables').innerText = service.deliverables;
+        document.getElementById('detail-citation-standards').innerText = service.citation;
+        document.getElementById('detail-rating').innerText = service.rating;
+
+        document.getElementById('detail-visual-graphic-box').innerHTML = `
+            <div class="w-full max-w-sm">${getVisualGraphicHTML(service.visualType)}</div>
+        `;
+
+        document.getElementById('calc-quantity-label').innerText = 
+            service.id === 'ppt' ? 'عدد السلايدات:' : 'عدد الصفحات:';
+
+        document.getElementById('couponInput').value = '';
+        document.getElementById('couponFeedback').classList.add('hidden');
+        document.getElementById('discountBadge').classList.add('hidden');
+
+        recalculatePrice();
+
+        document.getElementById('main-content-view').classList.add('hidden');
+        document.getElementById('service-detail-view').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showMainStoreView() {
+        document.getElementById('service-detail-view').classList.add('hidden');
+        document.getElementById('main-content-view').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* ============================================================
+       PRICE CALCULATOR
+       ============================================================ */
+    function adjustPageCount(delta) {
+        const input = document.getElementById('calcPageInput');
+        let current = parseInt(input.value) || 1;
+        current = Math.max(1, current + delta);
+        input.value = current;
+        recalculatePrice();
+    }
+
+    function recalculatePrice() {
+        const pages = Math.max(1, parseInt(document.getElementById('calcPageInput').value) || 1);
+        const speed = document.getElementById('calcSpeedSelect').value;
+        
+        let total = pages * currentSelectedService.unitPrice;
+        if (speed === 'fast') total *= 1.3;
+        if (appliedDiscount > 0) total = total * (1 - appliedDiscount / 100);
+
+        const finalTotal = Math.round(total);
+        document.getElementById('calculatedPriceDisplay').innerText = 
+            `${finalTotal} ${CONFIG.currency}`;
+
+        // حساب القسط على 4 دفعات
+        const installment = (finalTotal / 4).toFixed(2);
+        document.getElementById('tabbyInstallment').innerText = `${installment} ${CONFIG.currency}/شهر`;
+    }
+
+    function applyCoupon() {
+        const code = document.getElementById('couponInput').value.trim().toUpperCase();
+        const feedback = document.getElementById('couponFeedback');
+        const badge = document.getElementById('discountBadge');
+
+        if (COUPONS[code]) {
+            appliedDiscount = COUPONS[code];
+            feedback.innerText = `✅ تم تطبيق خصم ${appliedDiscount}%`;
+            feedback.className = 'text-[10px] mt-1 font-bold text-emerald-600 block';
+            badge.innerText = `-${appliedDiscount}%`;
+            badge.classList.remove('hidden');
+            recalculatePrice();
+            showToast(`🌸 تم تطبيق الكوبون: خصم ${appliedDiscount}%`);
+        } else {
+            appliedDiscount = 0;
+            feedback.innerText = '❌ كود غير صحيح';
+            feedback.className = 'text-[10px] mt-1 font-bold text-rose-600 block';
+            badge.classList.add('hidden');
+            recalculatePrice();
+        }
+    }
+
+    /* ============================================================
+       ORDER SUBMISSION
+       ============================================================ */
+    function validateOrder(student, phone) {
+        if (!student || student.trim().length < 2) {
+            showToast('⚠️ يرجى إدخال الاسم', 'error');
+            return false;
+        }
+        if (!phone || phone.trim().length < 8) {
+            showToast('⚠️ يرجى إدخال رقم واتساب صحيح', 'error');
+            return false;
+        }
+        return true;
+    }
+
+    function getPaymentMethodLabel() {
+        const selected = document.querySelector('input[name="paymentMethod"]:checked');
+        if (!selected) return 'غير محدد';
+        const methods = {
+            'tabby': 'تابي Tabby (على 4 دفعات)',
+            'tamara': 'تمارا Tamara (ادفعي لاحقاً)',
+            'cash': 'دفع كاش / تحويل'
+        };
+        return methods[selected.value] || 'غير محدد';
+    }
+
+    function submitDetailedOrderToWhatsApp() {
+        const pages = document.getElementById('calcPageInput').value;
+        const speed = document.getElementById('calcSpeedSelect').options[document.getElementById('calcSpeedSelect').selectedIndex].text;
+        const student = document.getElementById('orderStudentName').value;
+        const phone = document.getElementById('orderPhone').value;
+        const notes = document.getElementById('orderSpecialNotes').value;
+        const totalPrice = document.getElementById('calculatedPriceDisplay').innerText;
+        const paymentMethod = getPaymentMethodLabel();
+
+        if (!validateOrder(student, phone)) return;
+
+        const orderCode = generateOrderCode();
+        const installment = (parseInt(totalPrice) / 4).toFixed(2);
+        
+        const text = 
+`مرحباً ${CONFIG.storeName} 🌸🇸🇦
+
+📌 *الخدمة:* ${currentSelectedService.title}
+📄 *الكمية:* ${pages}
+⚡ *السرعة:* ${speed}
+👤 *الطالبة:* ${student}
+📱 *رقم التواصل:* ${phone}
+💰 *التكلفة:* ${totalPrice}
+${appliedDiscount ? `🎟️ *الخصم:* ${appliedDiscount}%\n` : ''}💳 *طريقة الدفع:* ${paymentMethod}
+${paymentMethod.includes('تابي') || paymentMethod.includes('تمارا') ? `📊 *القسط الشهري:* ${installment} ${CONFIG.currency} × 4\n` : ''}📝 *ملاحظات:* ${notes || 'لا يوجد'}
+🔖 *كود الطلب:* ${orderCode}
+
+🌸 شكراً لثقتك بـ Rosa Store`;
+
+        saveOrderToHistory(orderCode, currentSelectedService.title, totalPrice);
+        window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+        showToast(`🌸 تم إنشاء الطلب: ${orderCode}`);
+    }
+
+    function generateOrderCode() {
+        const year = new Date().getFullYear();
+        const random = Math.floor(1000 + Math.random() * 9000);
+        return `RS-${year}-${random}`;
+    }
+
+    function saveOrderToHistory(code, service, price) {
+        const orders = JSON.parse(localStorage.getItem('rosa_orders') || '[]');
+        orders.unshift({ code, service, price, date: new Date().toISOString(), status: 'pending' });
+        localStorage.setItem('rosa_orders', JSON.stringify(orders.slice(0, 50)));
+    }
+
+    function saveOrderLocally() {
+        const draft = {
+            service: currentSelectedService.id,
+            pages: document.getElementById('calcPageInput').value,
+            speed: document.getElementById('calcSpeedSelect').value,
+            student: document.getElementById('orderStudentName').value,
+            phone: document.getElementById('orderPhone').value,
+            notes: document.getElementById('orderSpecialNotes').value
+        };
+        localStorage.setItem('rosa_draft', JSON.stringify(draft));
+        showToast('💾 تم حفظ المسودة');
+    }
+
+    function loadSavedDraft() {
+        const draft = localStorage.getItem('rosa_draft');
+        if (!draft) return;
+        try {
+            const d = JSON.parse(draft);
+            const nameEl = document.getElementById('orderStudentName');
+            const phoneEl = document.getElementById('orderPhone');
+            if (nameEl) nameEl.value = d.student || '';
+            if (phoneEl) phoneEl.value = d.phone || '';
+        } catch(e) {}
+    }
+
+    /* ============================================================
+       QUICK ORDER
+       ============================================================ */
+    function closeQuickOrderModal() {
+        document.getElementById('quick-order-modal').classList.add('hidden');
+        document.getElementById('quickOrderStudent').value = '';
+        document.getElementById('quickOrderPhone').value = '';
+        document.getElementById('quickOrderNotes').value = '';
+    }
+
+    function submitQuickOrderToWhatsApp() {
+        const service = document.getElementById('quickOrderTargetService').value;
+        const student = document.getElementById('quickOrderStudent').value;
+        const phone = document.getElementById('quickOrderPhone').value;
+        const notes = document.getElementById('quickOrderNotes').value;
+
+        if (!validateOrder(student, phone)) return;
+
+        const text = 
+`مرحباً ${CONFIG.storeName} 🌸🇸🇦
+
+📌 *الخدمة:* ${service}
+👤 *الطالبة:* ${student}
+📱 *رقم التواصل:* ${phone}
+📝 *التفاصيل:* ${notes || 'لا يوجد'}
+💳 *مهتمة بالتقسيط:* تابي / تمارا`;
+
+        window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+        closeQuickOrderModal();
+        showToast('🌸 تم فتح الواتساب');
+    }
+
+    /* ============================================================
+       ORDER TRACKING
+       ============================================================ */
+    function openOrderTrackingModal() {
+        document.getElementById('order-tracking-modal').classList.remove('hidden');
+        document.getElementById('trackingResult').classList.add('hidden');
+        document.getElementById('trackingCodeInput').value = '';
+    }
+
+    function closeOrderTrackingModal() {
+        document.getElementById('order-tracking-modal').classList.add('hidden');
+    }
+
+    function trackOrder() {
+        const code = document.getElementById('trackingCodeInput').value.trim().toUpperCase();
+        const result = document.getElementById('trackingResult');
+        const orders = JSON.parse(localStorage.getItem('rosa_orders') || '[]');
+        const order = orders.find(o => o.code === code);
+
+        if (!order) {
+            result.innerHTML = `
+                <div class="bg-rose-50 border border-rose-200 text-rose-700 p-4 rounded-2xl text-xs">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    لم يتم العثور على طلب. تواصلي مع الدعم.
+                </div>`;
+            result.classList.remove('hidden');
+            return;
+        }
+
+        const date = new Date(order.date).toLocaleDateString('ar-SA');
+        result.innerHTML = `
+            <div class="bg-pink-50 border border-brand-gold/40 p-4 rounded-2xl space-y-2 text-xs">
+                <div class="flex justify-between"><span class="font-bold text-rose-500">كود الطلب:</span><span class="font-black text-brand-rose">${order.code}</span></div>
+                <div class="flex justify-between"><span class="font-bold text-rose-500">الخدمة:</span><span class="text-brand-roseDark">${order.service}</span></div>
+                <div class="flex justify-between"><span class="font-bold text-rose-500">التكلفة:</span><span class="text-brand-roseDark font-bold">${order.price}</span></div>
+                <div class="flex justify-between"><span class="font-bold text-rose-500">التاريخ:</span><span class="text-brand-roseDark">${date}</span></div>
+                <div class="flex justify-between"><span class="font-bold text-rose-500">الحالة:</span><span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full text-[10px]">قيد التنفيذ</span></div>
+            </div>`;
+        result.classList.remove('hidden');
+    }
+
+    /* ============================================================
+       DARK MODE
+       ============================================================ */
+    function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('rosa_theme', isDark ? 'dark' : 'light');
+        document.getElementById('darkModeBtn').innerHTML = 
+            `<i class="fa-solid fa-${isDark ? 'sun' : 'moon'}"></i>`;
+    }
+
+    function restoreTheme() {
+        const theme = localStorage.getItem('rosa_theme');
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.getElementById('darkModeBtn').innerHTML = '<i class="fa-solid fa-sun"></i>';
+        }
+    }
+
+    /* ============================================================
+       MOBILE MENU
+       ============================================================ */
+    function toggleMobileMenu() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    function scrollToServices() {
+        document.getElementById('services-catalog').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /* ============================================================
+       FLOATING WHATSAPP
+       ============================================================ */
+    function openFloatingWhatsApp(e) {
+        e.preventDefault();
+        const text = `مرحباً ${CONFIG.storeName} 🌸🇸🇦، أريد استشارة عامة وحساب التكلفة، وأرغب بالتقسيط عبر تابي أو تمارا.`;
+        window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    /* ============================================================
+       TOAST
+       ============================================================ */
+    function showToast(message, type = 'success') {
+        const toast = document.getElementById('toast');
+        const msg = document.getElementById('toastMessage');
+        msg.innerText = message;
+        
+        const inner = toast.querySelector('div');
+        inner.className = `bg-brand-roseDark text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 text-sm font-bold border-r-4 ${type === 'error' ? 'border-rose-500' : 'border-brand-gold'}`;
+        
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+
+    /* ============================================================
+       CHATBOT
+       ============================================================ */
+    const botScenarios = [
+        { btn: '🌸 الأسعار ومدة التنفيذ؟', reply: 'تبدأ من 55 ر.س للسلايد و90 ر.س للصفحة. التسليم العادي 3-5 أيام، المستعجل 24-48 ساعة (+30%).' },
+        { btn: '💳 كيف أقسّط مع تابي وتمارا؟', reply: 'يمكنك تقسيم طلبك على 4 دفعات بدون فوائد عبر تابي، أو الدفع لاحقاً عبر تمارا. اختاري طريقة الدفع عند إتمام الطلب!' },
+        { btn: '🛡️ كيف أضمن عدم السرقة الأدبية؟', reply: 'نرفق تقرير Turnitin رسمي مجاناً يثبت خلو البحث من السرقة الأدبية 100%.' },
+        { btn: '🇸🇦 هل الخدمة متاحة للسعودية؟', reply: 'نعم! نحن متجر سعودي 100%، وخدماتنا متاحة لجميع الطالبات في المملكة، والدعم بتوقيت السعودية.' },
+        { btn: '✨ هل توجد تعديلات مجانية؟', reply: 'نعم! تعديلات مجانية غير محدودة حتى رضا الدكتورة واعتماد العمل.' },
+        { btn: '💕 كيف أطلب خدمة؟', reply: 'اضغطي "اطلبي الآن" أو استخدمي الحاسبة، أو راسلينا مباشرة على الواتساب.' }
+    ];
+
+    function toggleChatbot() {
+        const box = document.getElementById('chat-window-box');
+        box.classList.toggle('hidden');
+        if (!box.classList.contains('hidden')) resetBotMessages();
+    }
+
+    function initChatbot() {
+        const btnContainer = document.getElementById('chat-qa-buttons');
+        btnContainer.innerHTML = '';
+        botScenarios.forEach(s => {
+            const btn = document.createElement('button');
+            btn.className = 'w-full text-right bg-pink-50 hover:bg-pink-100 border border-pink-200 p-2 rounded-xl text-brand-roseDark font-semibold transition text-[11px]';
+            btn.innerText = s.btn;
+            btn.onclick = () => triggerBotReply(s.btn, s.reply);
+            btnContainer.appendChild(btn);
+        });
+    }
+
+    function resetBotMessages() {
+        document.getElementById('chat-messages-stream').innerHTML = `
+            <div class="bg-brand-gold/20 border border-brand-gold/40 text-brand-roseDark p-3 rounded-2xl rounded-tr-none text-xs leading-relaxed">
+                أهلاً بك في ${CONFIG.storeName} 🇸🇦🌸 كيف يمكنني مساعدتك اليوم؟ نحن نقدم خدمات أكاديمية معتمدة مع إمكانية التقسيط عبر تابي وتمارا!
+            </div>`;
+    }
+
+    function triggerBotReply(userQ, botA) {
+        const stream = document.getElementById('chat-messages-stream');
+        const userDiv = document.createElement('div');
+        userDiv.className = 'gradient-rose text-white p-2.5 rounded-2xl rounded-tl-none font-bold text-xs ml-auto w-fit max-w-[85%] shadow-sm';
+        userDiv.innerText = userQ;
+        stream.appendChild(userDiv);
+
+        setTimeout(() => {
+            const botDiv = document.createElement('div');
+            botDiv.className = 'bg-brand-gold/20 border border-brand-gold/40 text-brand-roseDark p-3 rounded-2xl rounded-tr-none text-xs leading-relaxed max-w-[90%] shadow-sm';
+            botDiv.innerHTML = `<b>مساعدة Rosa:</b> ${botA}`;
+            stream.appendChild(botDiv);
+            stream.scrollTop = stream.scrollHeight;
+        }, 300);
+    }
+
+    /* ============================================================
+       KEYBOARD SHORTCUTS
+       ============================================================ */
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeQuickOrderModal();
+            closeOrderTrackingModal();
+            const chat = document.getElementById('chat-window-box');
+            if (!chat.classList.contains('hidden')) chat.classList.add('hidden');
+        }
+    });
+</script>
+
+</body>
+</html>
